@@ -16,9 +16,9 @@ struct Chat: View {
             
             // white background for tabview
             whiteTabView
-                .frame(width: 430.0, height: 116.0)
+                .frame(width: 400, height: 116.0)
                 .foregroundColor(.white)
-                .position(CGPoint(x: 195, y: 800))
+                .position(CGPoint(x: 196.5, y: 800))
             
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
