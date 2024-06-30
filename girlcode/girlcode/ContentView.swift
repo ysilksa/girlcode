@@ -8,6 +8,12 @@
 
 import SwiftUI
 
+// the background screen featured in every tab
+let backgroundGradient = LinearGradient(gradient: Gradient(colors: [Color(hex: 16749721), Color(hex: 16756353)]), startPoint: .top, endPoint: .bottom)
+
+// the bottom tab that serves as a background for the tabs 
+let whiteTabView = RoundedRectangle(cornerRadius: 40)
+
 struct ContentView: View {
 
     var body: some View {
