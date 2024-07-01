@@ -9,7 +9,9 @@
 
 
 ## Updates (most recent to least recent)
-- 6/30/24 : Changed example images (profile picture, banner) in Profile tab to be more visually pleasing. Centered and formatted them towards the top. Added borders with shadows around both images. 
+- Repositioned the example profile picture and banner. Added profile customization with username, "Looking to" (i.e. looking to travel with x people), "Age Range", and "Neighborhood." Neighborhoods listed are only neighborhoods in Chicago that are recognized by the city. Username and "Looking to" are customixed via user input, while "Age Range" and "Neighborhood" are customized via drop-down boxes. 
+
+- 6/30/24 : Changed example images (profile picture, banner) in Profile tab to be more visually pleasing. Centered and positioned them towards the top. Added borders with shadows around both images. 
 
 - 6/29/24 : Moved gradientBackground and whiteTabView to be in ContentView rather than HomePage. Fixed positioning and sizing of whiteTabView in tabs. Added example profile picture and background for Profile tab.
 
