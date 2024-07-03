@@ -21,12 +21,12 @@ struct ContentView: View {
         TabView () {
             // customize the pages' text and icon
             // for HomePage Icon
-            MapView()
+            HomePage()
                 .tabItem {
-                    Image(systemName:"map")
-                    Text("Map")
+                    Image(systemName:"house")
+                    Text("Home")
                 }
-                .tag("MapView")
+                .tag("HomePage")
             
             // for Chat icon
             Chat()
