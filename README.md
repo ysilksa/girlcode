@@ -9,6 +9,8 @@
 
 
 ## Updates (most recent to least recent)
+- 7/3/24 : Centered the input text boxes in Profile and changed accent colors to be consistent with the rest of the app's. Changed HomePage to MapView, which has a Map where users can navigate to locations they are commonly at (home, school, work). 
+
 - 7/1/24 : Repositioned the example profile picture and banner. Added profile customization with username, "Looking to" (i.e. looking to travel with x people), "Age Range", and "Neighborhood." Neighborhoods listed are only neighborhoods in Chicago that are recognized by the city. Username and "Looking to" are customixed via user input, while "Age Range" and "Neighborhood" are customized via drop-down boxes. 
 
 - 6/30/24 : Changed example images (profile picture, banner) in Profile tab to be more visually pleasing. Centered and positioned them towards the top. Added borders with shadows around both images. 
