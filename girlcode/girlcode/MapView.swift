@@ -169,11 +169,11 @@ struct PlaceAnnotationView: View {
             // below here is the pin image
             Image(systemName: "mappin.circle.fill")
                 .font(.title)
-                .foregroundColor(.pink)
+                .foregroundColor(Color(hex: 16726702))
             
             Image(systemName: "arrowtriangle.down.fill")
                 .font(.caption)
-                .foregroundColor(.pink)
+                .foregroundColor(Color(hex: 16726702))
                 .offset(x: 0, y: -5)
         }
         .onTapGesture {
