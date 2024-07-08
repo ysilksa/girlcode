@@ -8,15 +8,24 @@
 import SwiftUI
 import MapKit
 
+let MapLocations = [
+    MapViewLocations(eventName: "Car Accident", eventDescription: "License plate ABCDEF was damaged in a hit-and-run", latitude: 41.8795, longitude: -87.6338)
+]
+
 struct MapView: View {
     // TODO: add custom pins on the map
     
     // the starting position of the camera, Chicago
-    @State private var startPos = MapCameraPosition.region(
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 41.881832, longitude: -87.623177),
-            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
-        )
+//    @State private var startPos = MapCameraPosition.region(
+//        MKCoordinateRegion(
+//            center: CLLocationCoordinate2D(latitude: 41.881832, longitude: -87.623177),
+//            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+//        )
+//    )
+    
+    @State private var startPos = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 41.881832, longitude: -87.623177),
+        span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
     )
     
     var body: some View {
@@ -26,7 +35,14 @@ struct MapView: View {
             backgroundGradient
             
             // Map set to the startPos of Chicago
-            Map(position: $startPos)
+            //Map(position: $startPos)
+            
+            Map(coordinateRegion: $startPos, annotationItems: MapLocations
+            ) { place in
+                MapAnnotation(coordinate: place.coordinate) {
+                    PlaceAnnotationView(title: place.eventName)
+                }
+            }
             
             // white background for tabview
             whiteTabView
@@ -46,12 +62,12 @@ struct MapView: View {
                     .frame(width: 100, height: 40)
                 
                 Button("Home") { // change coordinates to the Willis Tower
-                    startPos = MapCameraPosition.region(
+                    startPos =
                         MKCoordinateRegion(
                             center: CLLocationCoordinate2D(latitude: 41.878876, longitude: -87.635918),
                             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                         )
-                    )
+                    
                 }
             }
             .position(CGPoint(x: 70, y: 700))
@@ -69,12 +85,12 @@ struct MapView: View {
                     .frame(width: 100, height: 40)
                 
                 Button("Work") { // change the coordinates to the Apple Michigan Avenue Store
-                    startPos = MapCameraPosition.region(
+                    startPos =
                         MKCoordinateRegion(
                             center: CLLocationCoordinate2D(latitude: 41.898773, longitude: -87.622925),
                             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                         )
-                    )
+                    
                 }
             }
             .position(CGPoint(x: 196.5, y: 700))
@@ -91,12 +107,12 @@ struct MapView: View {
                     .frame(width: 100, height: 40)
                 
                 Button("School") { // change the coordinates to Northwestern
-                    startPos = MapCameraPosition.region(
+                    startPos =
                         MKCoordinateRegion(
                             center: CLLocationCoordinate2D(latitude: 42.055984, longitude: -87.675171),
                             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                         )
-                    )
+                    
                 }
                     
             }
@@ -110,4 +126,51 @@ struct MapView: View {
 
 #Preview {
     MapView()
+}
+
+// struct for a MapViewLocation
+struct MapViewLocations: Identifiable {
+    let id = UUID()
+    let eventName: String // name of the event, i.e. "Car crash"
+    let eventDescription: String // description of the event, i.e. "Car with license plate ABCDEF was hit."
+    let latitude: Double
+    let longitude: Double
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+}
+
+
+// struct for a custom pin
+struct PlaceAnnotationView: View {
+    @State private var showTitle = true
+    
+    let title: String
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            Text(title)
+                .font(.callout)
+                .padding(5)
+                .background(Color(.white))
+                .cornerRadius(10)
+                .opacity(showTitle ? 0 : 1)
+            
+            // below here is the pin image
+            Image(systemName: "mappin.circle.fill")
+                .font(.title)
+                .foregroundColor(.pink)
+            
+            Image(systemName: "arrowtriangle.down.fill")
+                .font(.caption)
+                .foregroundColor(.pink)
+                .offset(x: 0, y: -5)
+        }
+        .onTapGesture {
+            withAnimation(.easeInOut) {
+                showTitle.toggle()
+            }
+        }
+        
+    }
 }
