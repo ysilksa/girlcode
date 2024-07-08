@@ -5,11 +5,12 @@
 
 - App built for ECC Chicago iOS App Development Program 2024.
 - Coded in SwiftUI.
-- [Figma Prototype](https://www.figma.com/design/jzO1ycIUzJq9XcUC1xcrki/GirlCode?node-id=13-10&t=VaVS19D4h0Wy4heV-1)
+- [Figma Prototype - Created the Profile Page.](https://www.figma.com/design/jzO1ycIUzJq9XcUC1xcrki/GirlCode?node-id=13-10&t=VaVS19D4h0Wy4heV-1)
 
 
 ## Updates (most recent to least recent)
-- 7/7/24 : Updated MapView to include map annotations. Map annotations can be pressed on to show a brief title of an event that happened there. 
+
+- 7/7/24 : Updated MapView to include map annotations. Map annotations can be pressed on to show a brief title of an event that happened there. Uploaded asset used for an example hard-coded pin, and changed color of map annotations. 
 
 - 7/3/24 : Centered the input text boxes in Profile and changed accent colors to be consistent with the rest of the app's. Changed HomePage to MapView, which has a Map where users can navigate to locations they are commonly at (home, school, work). 
 
