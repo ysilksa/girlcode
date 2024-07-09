@@ -8,6 +8,10 @@
 import SwiftUI
 import MapKit
 
+// TODO
+// 2d to 3d map - showcase surroundings
+// compass ?
+
 // hard-coded example events, where each item in the list represents one event, its name/description, and its coordinates.
 let MapLocations = [
     MapViewLocation(eventName: "Car Accident", eventDescription: "License plate ABCDEF was damaged in a hit-and-run near Adams St and Wells St.", latitude: 41.8795, longitude: -87.6338),
@@ -203,19 +207,19 @@ struct LocationEventView: View {
                 // border and text for the details of the event
                 ZStack {
                     // color background for eventName
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(hex: 15655915))
-                        .frame(width: 250, height: 70)
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .fill(Color(hex: 15655915))
+//                        .frame(width: 250, height: 70)
                     
                     // white background for eventName
-                    RoundedRectangle (cornerRadius: 10)
-                        .fill(Color.white)
-                        .frame(width: 240, height: 60)
+//                    RoundedRectangle (cornerRadius: 10)
+//                        .fill(Color.white)
+//                        .frame(width: 245, height: 65)
                     
                     // text for the eventName
                     Text(event.eventName)
-                        .font(.title)
-                        .foregroundStyle(Color(hex: 2500134))
+                        .font(.custom("PlayfairDisplay-Regular", size: 40))
+                        .foregroundStyle(Color.white)
                 }
                 
                 // example image of a crossroads, could represent any image of the situation
@@ -240,11 +244,12 @@ struct LocationEventView: View {
                     // white background for eventDescription
                     RoundedRectangle (cornerRadius: 10)
                         .fill(Color.white)
-                        .frame(width: 240, height: 150)
+                        .frame(width: 245, height: 155)
                     
                     // text for the eventDescription
                     Text(event.eventDescription)
-                        .font(.title3)
+                        .font(.custom("Sarabun-Regular", size: 20))
+                        .multilineTextAlignment(.leading)
                         .frame(width: 200, height: 150)
                         .foregroundStyle(Color(hex: 2500134))
 
