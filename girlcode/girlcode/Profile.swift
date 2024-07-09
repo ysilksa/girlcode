@@ -65,10 +65,10 @@ struct Profile: View {
             
             // example banner's pink tint
             Ellipse()
-                .fill(Color(hex: 16672622))
+                .fill(Color(hex: 16758465))
                 .frame(width: 580, height: 464)
                 .position(CGPoint(x: centerCoord, y: 70))
-                .opacity(0.5)
+                .opacity(0.6)
             
             // border of example pfp
             Circle()
@@ -87,44 +87,52 @@ struct Profile: View {
             // for the Profile sections
                 ZStack { // for the user's name
                     // border background for the name
-                    RoundedRectangle(cornerRadius: 40)
-                        .fill(Color(hex: 15655915))
-                        .frame(width: 200, height: 50)
-                        .position(CGPoint( x: centerCoord, y: 410))
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .fill(Color(hex: 15655915))
+//                        .frame(width: 200, height: 50)
+//                        .position(CGPoint( x: centerCoord, y: 410))
+//                    
+//                    // name input
+//                    RoundedRectangle (cornerRadius: 10)
+//                        .fill(Color.white)
+//                        .frame(width: 190, height: 40)
+//                        .position(CGPoint(x: centerCoord, y: 410))
                     
-                    // name input
-                    RoundedRectangle (cornerRadius: 40)
-                        .fill(Color.white)
-                        .frame(width: 190, height: 40)
+                    Text("Chisa Yan")
                         .position(CGPoint(x: centerCoord, y: 410))
+                        .font(.custom("Sarabun-Regular", size: 30))
+                        .foregroundColor(.white)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
                     
                     // text for the name, should be editable
-                    TextField("Username", text: $username)
-                        .frame(width: 180, height: 40, alignment: .center)
-                        .position(CGPoint(x: centerCoord, y: 410))
-                        .foregroundColor(.pink)
-                        .multilineTextAlignment(.center)
+//                    TextField("Username", text: $username)
+//                        .frame(width: 180, height: 40, alignment: .center)
+//                        .position(CGPoint(x: centerCoord, y: 410))
+//                        .foregroundColor(Color(hex: 16726702))
+//                        .multilineTextAlignment(.center)
                         
                 }
                
                 ZStack { // for "Looking to"
                     // "Looking to" Label
-                    Text("LOOKING TO")
-                        .position(CGPoint(x: centerCoord, y: 390))
+                    Text("About Me")
+                        .position(CGPoint(x: 90, y: 385))
                         .foregroundStyle(.white)
+                        .font(.custom("Sarabun-Regular", size: 20))
                     
-                    RoundedRectangle (cornerRadius: 40) // border
+                    RoundedRectangle (cornerRadius: 10) // border
                         .fill(Color(hex: 15655915))
                         .frame(width: 300, height: 50)
                     
-                    RoundedRectangle  (cornerRadius: 40) // about me input
+                    RoundedRectangle  (cornerRadius: 10) // about me input
                         .fill(Color.white)
-                        .frame(width: 290, height: 40)
+                        .frame(width: 295, height: 45)
                     
                     // text for the looking to, should be editable
                     TextField("Looking to...", text: $lookingto)
                         .frame(width: 280, height: 40, alignment: .center)
-                        .foregroundColor(.pink)
+                        .foregroundColor(Color(hex: 16726702))
                         .multilineTextAlignment(.center)
                    
                 }
@@ -132,18 +140,20 @@ struct Profile: View {
                 
                 ZStack { // for age range
                     // "Age Range" Label
-                    Text("AGE RANGE")
-                        .position(CGPoint(x: centerCoord, y: 390))
+                    Text("Age Range")
+                        .position(CGPoint(x: 95, y: 385))
                         .foregroundStyle(.white)
+                        .font(.custom("Sarabun-Regular", size: 20))
+
                     
-                    RoundedRectangle (cornerRadius: 40) // border
+                    RoundedRectangle (cornerRadius: 10) // border
                         .fill(Color(hex: 15655915))
                         .frame(width: 300, height: 50)
                         
                     
-                    RoundedRectangle  (cornerRadius: 40) // about me input
+                    RoundedRectangle  (cornerRadius: 10) // about me input
                         .fill(Color.white)
-                        .frame(width: 290, height: 40)
+                        .frame(width: 295, height: 45)
                     
                     // dropdown menu for selecting an age range
                     Picker("Age Range", selection: $ageSelection) {
@@ -152,24 +162,25 @@ struct Profile: View {
                         }
                     }
                     .pickerStyle(.menu)
-                    .accentColor(.pink)
+                    .accentColor(Color(hex: 16726702))
                 }
                 .position(CGPoint(x: centerCoord, y: 590))
             
             ZStack { // for neighborhood
                 // "Neighborhood" Label
-                Text("NEIGHBORHOOD")
-                    .position(CGPoint(x: centerCoord, y: 390))
+                Text("Neighborhood")
+                    .position(CGPoint(x: 110, y: 385))
                     .foregroundStyle(.white)
+                    .font(.custom("Sarabun-Regular", size: 20))
                 
-                RoundedRectangle (cornerRadius: 40) // border
+                RoundedRectangle (cornerRadius: 10) // border
                     .fill(Color(hex: 15655915))
                     .frame(width: 300, height: 50)
                     
                 
-                RoundedRectangle  (cornerRadius: 40) // about me input
+                RoundedRectangle  (cornerRadius: 10) // about me input
                     .fill(Color.white)
-                    .frame(width: 290, height: 40)
+                    .frame(width: 295, height: 45)
                 
                 // dropdown menu for selecting a neighborhood
                 Picker("Neighborhood", selection: $neighborhoodSelection) {
@@ -178,7 +189,7 @@ struct Profile: View {
                     }
                 }
                 .pickerStyle(.menu)
-                .accentColor(.pink)
+                .accentColor(Color(hex: 16726702))
             }
             .position(CGPoint(x: centerCoord, y: 680))
 
