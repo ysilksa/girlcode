@@ -49,8 +49,8 @@ struct MapView: View {
                 }
                 .ignoresSafeArea()
                 .mapControls {
-                    MapCompass()
                     MapPitchToggle()
+                    MapCompass()
                 }
             }
             .ignoresSafeArea()
@@ -66,14 +66,14 @@ struct MapView: View {
             
             ZStack { // "Home" location button
                 // border background for "Home" button
-                RoundedRectangle(cornerRadius: 40)
+                RoundedRectangle(cornerRadius: 10)
                     .fill(Color(hex: 15655915))
                     .frame(width: 110, height: 50)
                 
                 // "Home Button"
-                RoundedRectangle (cornerRadius: 40)
+                RoundedRectangle (cornerRadius: 10)
                     .fill(Color.white)
-                    .frame(width: 100, height: 40)
+                    .frame(width: 105, height: 45)
                 
                 Button("Home") { // change coordinates to the Willis Tower
                     startPos =
@@ -85,18 +85,20 @@ struct MapView: View {
                 }
             }
             .position(CGPoint(x: 70, y: 700))
+            .foregroundColor(Color(hex: 14959476))
+            .font(.custom("Sarabun-Regular", size: 20))
             
             
             ZStack { // "Work" location button
                 // border background for "Work" button
-                RoundedRectangle(cornerRadius: 40)
+                RoundedRectangle(cornerRadius: 10)
                     .fill(Color(hex: 15655915))
                     .frame(width: 110, height: 50)
                 
                 // "Work Button"
-                RoundedRectangle (cornerRadius: 40)
+                RoundedRectangle (cornerRadius: 10)
                     .fill(Color.white)
-                    .frame(width: 100, height: 40)
+                    .frame(width: 105, height: 45)
                 
                 Button("Work") { // change the coordinates to the Apple Michigan Avenue Store
                     startPos =
@@ -106,19 +108,21 @@ struct MapView: View {
                         )
                     
                 }
+                .foregroundColor(Color(hex: 14959476))
             }
             .position(CGPoint(x: 196.5, y: 700))
+            .font(.custom("Sarabun-Regular", size: 20))
             
             ZStack { // "School" location button
                 // border background for "School" button
-                RoundedRectangle(cornerRadius: 40)
+                RoundedRectangle(cornerRadius: 10)
                     .fill(Color(hex: 15655915))
                     .frame(width: 110, height: 50)
                 
                 // "School Button"
-                RoundedRectangle (cornerRadius: 40)
+                RoundedRectangle (cornerRadius: 10)
                     .fill(Color.white)
-                    .frame(width: 100, height: 40)
+                    .frame(width: 105, height: 45)
                 
                 Button("School") { // change the coordinates to Northwestern
                     startPos =
@@ -126,12 +130,12 @@ struct MapView: View {
                             center: CLLocationCoordinate2D(latitude: 42.055984, longitude: -87.675171),
                             span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
                         )
-                    
                 }
+                .foregroundColor(Color(hex: 14959476))
                     
             }
             .position(CGPoint(x: 323, y: 700))
-            
+            .font(.custom("Sarabun-Regular", size: 20))
             
         }
         .ignoresSafeArea()
@@ -210,58 +214,48 @@ struct LocationEventView: View {
             VStack (spacing: 30) {
                 // border and text for the details of the event
                 ZStack {
-                    // color background for eventName
-//                    RoundedRectangle(cornerRadius: 10)
-//                        .fill(Color(hex: 15655915))
-//                        .frame(width: 250, height: 70)
+                    // example image of a crossroads, could represent any image of the situation
+                    ZStack {
+                        Image(.crossroadsBackground)
+                            .resizable()
+                            .frame(width: 786, height: 400)
+                        
+                        // attributing the creator
+                        Text("Designed by Freepik")
+                            .font(.caption)
+                            .foregroundColor(Color.white)
+                            .padding(.top, 300.0)
+                            
+                    }
+                    .position(x: 196.5, y: 300)
                     
-                    // white background for eventName
-//                    RoundedRectangle (cornerRadius: 10)
-//                        .fill(Color.white)
-//                        .frame(width: 245, height: 65)
-                    
-                    // text for the eventName
-                    Text(event.eventName)
-                        .font(.custom("PlayfairDisplay-Regular", size: 40))
-                        .foregroundStyle(Color.white)
-                }
-                
-                // example image of a crossroads, could represent any image of the situation
-                VStack {
-                    Image(.crossroadsBackground)
-                        .resizable()
-                        .frame(width: 270, height: 200)
-                        .border(Color(hex: 15655915), width: 4)
-                    
-                    // attributing the creator
-                    Text("Designed by Freepik")
-                        .font(.caption)
-                }
-                
-                // border and text for details of the event
-                ZStack {
-                    // color background for eventDescription
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(hex: 15655915))
-                        .frame(width: 250, height: 160)
-                    
-                    // white background for eventDescription
-                    RoundedRectangle (cornerRadius: 10)
-                        .fill(Color.white)
-                        .frame(width: 245, height: 155)
-                    
-                    // text for the eventDescription
-                    Text(event.eventDescription)
-                        .font(.custom("Sarabun-Regular", size: 20))
-                        .multilineTextAlignment(.leading)
-                        .frame(width: 200, height: 150)
-                        .foregroundStyle(Color(hex: 2500134))
+                    RoundedRectangle(cornerRadius: 40)
+                        .position(x: centerCoord, y: 710)
+                        .frame(width: 393, height: 500)
+                        .foregroundColor(Color(hex: 16711422))
 
                 }
+                // text for the eventName
+                Text(event.eventName)
+                    .font(.custom("PlayfairDisplay-Regular", size: 40))
+                    .foregroundColor(.black)
+                    .position(x: 190, y: 0)
+                
+                // text for the eventDescription
+                Text(event.eventDescription)
+                    .font(.custom("Sarabun-Regular", size: 20))
+                    .lineSpacing(10)
+                    .lineLimit(nil)
+                    .frame(width: 320, height: 500)
+                    .foregroundStyle(Color.black)
+                    .position(x: 180, y: -100)
+
+                
             }
             .position(CGPoint(x: centerCoord, y: 290))
         }
-        .navigationTitle("Further Details") // title at the top of the page
+        .ignoresSafeArea()
+        //.navigationTitle("Further Details") // title at the top of the page
         
     }
     
