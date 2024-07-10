@@ -4,9 +4,9 @@
 ### girl code: building a community around one shared goal: safety. for women, by women.
 
 - App built for ECC Chicago iOS App Development Program 2024.
-- Coded in SwiftUI.
+- Coded in SwiftUI with a Firebase backend.
 - [Figma Prototype - Created the Profile Page.](https://www.figma.com/design/jzO1ycIUzJq9XcUC1xcrki/GirlCode?node-id=13-10&t=VaVS19D4h0Wy4heV-1)
-
+- [Firebase Package Dependency](https://github.com/firebase/firebase-ios-sdk)
 
 ## Updates (most recent to least recent)
 
