@@ -47,9 +47,13 @@ struct MapView: View {
                       }
                     }
                 }
-                
+                .ignoresSafeArea()
+                .mapControls {
+                    MapCompass()
+                    MapPitchToggle()
+                }
             }
-            .ignoresSafeArea(edges: .top)
+            .ignoresSafeArea()
             .navigationTitle("Custom Annotation")
             .navigationBarTitleDisplayMode(.inline)
             
