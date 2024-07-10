@@ -6,11 +6,6 @@
 //  This Swift file holds the profile, which users can customize.
 //
 
-
-// TO DO
-// add fonts?
-// add a report button for reporting a user if they have bad intentions :(
-
 import SwiftUI
 
 // age-ranges for first dropdown menu
@@ -53,7 +48,7 @@ struct Profile: View {
                 .fill(Color(hex: 15655915))
                 .shadow(radius: 10)
                 .frame(width: 580, height: 464)
-                .position(CGPoint(x: centerCoord, y: 80))
+                .position(CGPoint(x: centerCoord, y: 40))
             
             // example banner above pfp
             Image(.examplebanner5)
@@ -61,13 +56,13 @@ struct Profile: View {
                 .scaledToFill()
                 .frame(width: 580.0, height: 464)
                 .clipShape(Ellipse())
-                .position(CGPoint(x: centerCoord, y: 70))
+                .position(CGPoint(x: centerCoord, y: 30))
             
             // example banner's pink tint
             Ellipse()
                 .fill(Color(hex: 16758465))
                 .frame(width: 580, height: 464)
-                .position(CGPoint(x: centerCoord, y: 70))
+                .position(CGPoint(x: centerCoord, y: 30))
                 .opacity(0.6)
             
             // border of example pfp
@@ -75,42 +70,23 @@ struct Profile: View {
                 .fill(Color(hex: 15655915))
                 .shadow(radius: 10)
                 .frame(width: 220, height: 220)
-                .position(CGPoint(x: centerCoord, y: 270))
+                .position(CGPoint(x: centerCoord, y: 235))
             
             // example pfp
             Image(.examplepfp3)
                 .resizable()
                 .frame(width: 200.0, height: 200.0)
                 .clipShape(Circle())
-                .position(CGPoint(x: centerCoord, y: 270))
+                .position(CGPoint(x: centerCoord, y: 235))
                 
             // for the Profile sections
                 ZStack { // for the user's name
-                    // border background for the name
-//                    RoundedRectangle(cornerRadius: 10)
-//                        .fill(Color(hex: 15655915))
-//                        .frame(width: 200, height: 50)
-//                        .position(CGPoint( x: centerCoord, y: 410))
-//                    
-//                    // name input
-//                    RoundedRectangle (cornerRadius: 10)
-//                        .fill(Color.white)
-//                        .frame(width: 190, height: 40)
-//                        .position(CGPoint(x: centerCoord, y: 410))
                     
                     Text("Chisa Yan")
-                        .position(CGPoint(x: centerCoord, y: 410))
-                        .font(.custom("Sarabun-Regular", size: 30))
+                        .position(CGPoint(x: centerCoord, y: 370))
                         .foregroundColor(.white)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    
-                    
-                    // text for the name, should be editable
-//                    TextField("Username", text: $username)
-//                        .frame(width: 180, height: 40, alignment: .center)
-//                        .position(CGPoint(x: centerCoord, y: 410))
-//                        .foregroundColor(Color(hex: 16726702))
-//                        .multilineTextAlignment(.center)
+                        .font(.custom("Sarabun-Regular", size: 30))
                         
                 }
                
@@ -132,7 +108,7 @@ struct Profile: View {
                     // text for the looking to, should be editable
                     TextField("Looking to...", text: $lookingto)
                         .frame(width: 280, height: 40, alignment: .center)
-                        .foregroundColor(Color(hex: 16726702))
+                        .foregroundColor(Color(hex: 7171437))
                         .multilineTextAlignment(.center)
                    
                 }
@@ -162,7 +138,7 @@ struct Profile: View {
                         }
                     }
                     .pickerStyle(.menu)
-                    .accentColor(Color(hex: 16726702))
+                    .accentColor(Color(hex: 7171437))
                 }
                 .position(CGPoint(x: centerCoord, y: 590))
             
@@ -189,10 +165,27 @@ struct Profile: View {
                     }
                 }
                 .pickerStyle(.menu)
-                .accentColor(Color(hex: 16726702))
+                .accentColor(Color(hex: 7171437))
             }
             .position(CGPoint(x: centerCoord, y: 680))
-
+            
+            // button to report people 
+            VStack {
+                Button(action: {
+                        // future: add functionality to report button
+                      }) {
+                        Label("Report", systemImage: "exclamationmark.triangle")
+                          .padding()
+                          .foregroundColor(.white)
+                          .background(Color(hex: 16619158))
+                          .cornerRadius(10)
+                          .frame(width: 100, height: 5)
+                          .font(.custom("Sarabun-Regular", size: 12))
+                      }
+            }
+            .position(x: centerCoord, y: 420)
+            
+            
         }
         .ignoresSafeArea() // so we can go into the borders
     }
