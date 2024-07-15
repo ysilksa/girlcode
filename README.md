@@ -10,6 +10,8 @@
 
 ## Updates (most recent to least recent)
 
+- 7/15/24 : Resources tab added via teammate. Updated the UI of all resources and the main resource tab. Assets updated from teammate. 
+
 - 7/9/24 : Private chat function added via teammate. UI of Profile tab and MapView NavigationLink changed. Assets updated from teammate.
 
 - 7/8/24 : Added custom fonts. Changed UI of Profile tab and Further Details tab in MapView tab. 
