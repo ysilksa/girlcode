@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D38C9052C3D911D00939450 /* Sarabun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D38C9042C3D911C00939450 /* Sarabun-Regular.ttf */; };
 		0D38C9072C3D981400939450 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D38C9062C3D981400939450 /* PlayfairDisplay-Regular.ttf */; };
+		0DA2B30E2C3EFE6100DB6928 /* Resource 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B3072C3EFE6100DB6928 /* Resource 4.swift */; };
+		0DA2B30F2C3EFE6100DB6928 /* Resource 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B3082C3EFE6100DB6928 /* Resource 3.swift */; };
+		0DA2B3102C3EFE6100DB6928 /* Resource 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B3092C3EFE6100DB6928 /* Resource 2.swift */; };
+		0DA2B3112C3EFE6100DB6928 /* Resource 6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B30A2C3EFE6100DB6928 /* Resource 6.swift */; };
+		0DA2B3122C3EFE6100DB6928 /* Resource 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B30B2C3EFE6100DB6928 /* Resource 5.swift */; };
+		0DA2B3132C3EFE6100DB6928 /* Resource 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B30C2C3EFE6100DB6928 /* Resource 1.swift */; };
+		0DA2B3142C3EFE6100DB6928 /* Resource 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2B30D2C3EFE6100DB6928 /* Resource 7.swift */; };
 		0DD7651A2C30C4DF00DDA4AA /* girlcodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD765192C30C4DF00DDA4AA /* girlcodeApp.swift */; };
 		0DD7651C2C30C4DF00DDA4AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7651B2C30C4DF00DDA4AA /* ContentView.swift */; };
 		0DD7651E2C30C4E000DDA4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7651D2C30C4E000DDA4AA /* Assets.xcassets */; };
@@ -32,6 +39,13 @@
 		0D38C9032C3D904E00939450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D38C9042C3D911C00939450 /* Sarabun-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Regular.ttf"; sourceTree = "<group>"; };
 		0D38C9062C3D981400939450 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		0DA2B3072C3EFE6100DB6928 /* Resource 4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 4.swift"; sourceTree = "<group>"; };
+		0DA2B3082C3EFE6100DB6928 /* Resource 3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 3.swift"; sourceTree = "<group>"; };
+		0DA2B3092C3EFE6100DB6928 /* Resource 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 2.swift"; sourceTree = "<group>"; };
+		0DA2B30A2C3EFE6100DB6928 /* Resource 6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 6.swift"; sourceTree = "<group>"; };
+		0DA2B30B2C3EFE6100DB6928 /* Resource 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 5.swift"; sourceTree = "<group>"; };
+		0DA2B30C2C3EFE6100DB6928 /* Resource 1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 1.swift"; sourceTree = "<group>"; };
+		0DA2B30D2C3EFE6100DB6928 /* Resource 7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource 7.swift"; sourceTree = "<group>"; };
 		0DD765162C30C4DF00DDA4AA /* girlcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = girlcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD765192C30C4DF00DDA4AA /* girlcodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = girlcodeApp.swift; sourceTree = "<group>"; };
 		0DD7651B2C30C4DF00DDA4AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +86,20 @@
 			path = "Custom Fonts";
 			sourceTree = "<group>";
 		};
+		0DA2B3062C3EFE3E00DB6928 /* Resource Materials */ = {
+			isa = PBXGroup;
+			children = (
+				0DA2B30C2C3EFE6100DB6928 /* Resource 1.swift */,
+				0DA2B3092C3EFE6100DB6928 /* Resource 2.swift */,
+				0DA2B3082C3EFE6100DB6928 /* Resource 3.swift */,
+				0DA2B3072C3EFE6100DB6928 /* Resource 4.swift */,
+				0DA2B30B2C3EFE6100DB6928 /* Resource 5.swift */,
+				0DA2B30A2C3EFE6100DB6928 /* Resource 6.swift */,
+				0DA2B30D2C3EFE6100DB6928 /* Resource 7.swift */,
+			);
+			path = "Resource Materials";
+			sourceTree = "<group>";
+		};
 		0DD7650D2C30C4DF00DDA4AA = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +128,7 @@
 				0DD7652B2C30C51F00DDA4AA /* Resources.swift */,
 				0DD7652D2C30C52A00DDA4AA /* Profile.swift */,
 				0DFD4A3D2C3EDC110001874C /* Chat Materials */,
+				0DA2B3062C3EFE3E00DB6928 /* Resource Materials */,
 				0D38C9002C3D8FE200939450 /* Custom Fonts */,
 				0DD7651D2C30C4E000DDA4AA /* Assets.xcassets */,
 				0DD7651F2C30C4E000DDA4AA /* Preview Content */,
@@ -228,13 +257,20 @@
 				0DD7651C2C30C4DF00DDA4AA /* ContentView.swift in Sources */,
 				0DFD4A452C3EDC6D0001874C /* Message.swift in Sources */,
 				0DD765302C30C58F00DDA4AA /* Chat.swift in Sources */,
+				0DA2B3132C3EFE6100DB6928 /* Resource 1.swift in Sources */,
+				0DA2B3122C3EFE6100DB6928 /* Resource 5.swift in Sources */,
 				0DD7652E2C30C52A00DDA4AA /* Profile.swift in Sources */,
 				0DD7652C2C30C51F00DDA4AA /* Resources.swift in Sources */,
 				0DFD4A462C3EDC6D0001874C /* MessageBubble.swift in Sources */,
 				0DFD4A482C3EDC740001874C /* MessagesManager.swift in Sources */,
+				0DA2B30E2C3EFE6100DB6928 /* Resource 4.swift in Sources */,
+				0DA2B3112C3EFE6100DB6928 /* Resource 6.swift in Sources */,
+				0DA2B3142C3EFE6100DB6928 /* Resource 7.swift in Sources */,
 				0DFD4A4D2C3EDC840001874C /* TileRow.swift in Sources */,
+				0DA2B30F2C3EFE6100DB6928 /* Resource 3.swift in Sources */,
 				0DD7651A2C30C4DF00DDA4AA /* girlcodeApp.swift in Sources */,
 				0DFD4A4C2C3EDC840001874C /* MessageField.swift in Sources */,
+				0DA2B3102C3EFE6100DB6928 /* Resource 2.swift in Sources */,
 				0DFD4A3F2C3EDC5F0001874C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
